@@ -20,11 +20,11 @@ class Polygon{
 class Triangle extends Polygon{
   get isValid(){
     if (this.countSides === 3){
-      if (this.sides[0] + this.sides[1] > this.sides[2]){
+      if ((this.sides[0] + this.sides[1]) > this.sides[2]){
         return false;
-      } else if (this.sides[1] + this.sides[2] > this.sides[0]){
+      } else if ((this.sides[1] + this.sides[2]) > this.sides[0]){
         return false;
-      } else if (this.sides[2] + this.sides[0] > this.sides[1]){
+      } else if ((this.sides[2] + this.sides[0]) > this.sides[1]){
         return false;
       }
       return true;
