@@ -20,7 +20,7 @@ class Polygon{
 class Triangle extends Polygon{
   get isValid(){
     if (!(Array.isArray(this.sides))) return;
-    if (this.countSides === 3){
+    if (this.countSides !== 3) return false;
       if ((this.sides[0] + this.sides[1]) > this.sides[2]){
         return false;
       } else if ((this.sides[1] + this.sides[2]) > this.sides[0]){
@@ -29,8 +29,7 @@ class Triangle extends Polygon{
         return false;
       }
       return true;
-    } else
-      return false;
+    
   }
 }
 class Square extends Polygon{}
