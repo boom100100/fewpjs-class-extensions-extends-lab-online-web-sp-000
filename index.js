@@ -31,5 +31,7 @@ class Triangle extends Polygon{
   }
 }
 class Square extends Polygon{
-  
+  get area(){
+    return this.sides * this.sides;
+  }
 }
